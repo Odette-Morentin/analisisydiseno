@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-azul: #1597BB;
+    --color-verde: #4CAF50;
+    --color-negro: #1A1A1A;
+    --color-blanco: #FFFFFF;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+body {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-family: var(--fuente-montserrat);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.datos {
+    background-color: var(--color-azul);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.datos_secciones {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.seccion1, .seccion2 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.datos_titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-blanco);
+}
+
+.datos_texto, .text {
+    font-size: 1rem;
+    margin: 0.5rem 0 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+button {
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    font-family: var(--fuente-montserrat);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+    align-self: center;
+    width: 200px;
+}
+
+button:hover {
+    background-color: var(--color-hover);
+}
