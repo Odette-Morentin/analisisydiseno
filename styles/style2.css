@@ -67,7 +67,7 @@ h2 {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
+input[type="number"],
 select {
     padding: 0.5rem;
     border: none;
