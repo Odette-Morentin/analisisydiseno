@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captura de datos</title>
     <link rel="stylesheet" href="./styles/style2.css">
+    <script src="./scripts/limitaciones.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            limitacionCelularCodigoPostal();
+        });
+    </script>
 </head>
 <body>
     <main class="datos">
@@ -15,13 +21,13 @@
                 <h2>Datos personales</h2>
 
                 <p class="datos_texto">Nombre Completo</p>
-                <input type="text">
+                <input type="text" placeholder="Maximo Marco Aurelio">
 
                 <p class="datos_texto">Correo Electrónico</p>
-                <input type="email">
+                <input type="email" placeholder="maximomarcoaurelio@gmail.com">
 
                 <p class="datos_texto">Número de celular</p>
-                <input type="number">
+                <input type="text" placeholder=" +52 1234567890" id="numero-celular" maxlength="15">
 
                 <p class="datos_texto">Género</p>
                 <select>
@@ -36,16 +42,16 @@
                 <h2>Datos de envío</h2>
 
                 <p class="datos_texto">Calle y Número</p>
-                <input type="text">
+                <input type="text" placeholder="Leonardo Da Vinci 29">
 
                 <p class="datos_texto">Colonia</p>
-                <input type="text">
+                <input type="text" placeholder="Residencial altozano">
 
                 <p class="datos_texto">Código Postal</p>
-                <input type="number">
+                <input type="text" id="codigo-postal" maxlength="5" required placeholder="Ej: 12345">
 
                 <p class="datos_texto">Ciudad</p>
-                <input type="text">
+                <input type="text" placeholder="Colima">
             </section>
         </div>
 
