@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa Elegante Azul Para Hombre</title>
+    <link rel="stylesheet" href="./styles/style3.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Camisas</h1>
+    </header>
+
+    <main class="producto-container">
+        <section class="producto-imagen">
+            <img src="imagenes/camisa_azul_elegante.jpg" alt="Camisa Elegante Azul">
+        </section>
+
+        <section class="producto-info">
+            <h2>Camisa Elegante Azul Para Hombre</h2>
+            <p class="precio">$499.99</p>
+            <p class="descripcion">
+                Esta camisa de vestir en tono azul es perfecta para ocasiones formales o semi-formales. 
+                Fabricada en algodón de alta calidad, ofrece comodidad y estilo. 
+                Cuenta con cuello clásico, botones perlados y un corte que favorece cualquier tipo de cuerpo.
+            </p>
+
+            <div class="tallas">
+                <h3>Tallas disponibles</h3>
+                <div class="tallas-opciones">
+                    <label class="talla-option">
+                        <input type="radio" name="talla" value="S" checked>
+                        <span>S</span>
+                    </label>
+                    <label class="talla-option">
+                        <input type="radio" name="talla" value="M">
+                        <span>M</span>
+                    </label>
+                    <label class="talla-option">
+                        <input type="radio" name="talla" value="L">
+                        <span>L</span>
+                    </label>
+                    <label class="talla-option">
+                        <input type="radio" name="talla" value="XL">
+                        <span>XL</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cantidad">
+                <h3>Cantidad</h3>
+                <div class="cantidad-selector">
+                    <button class="cantidad-btn" id="decrementar">-</button>
+                    <input type="number" id="cantidad" value="1" min="1" max="10">
+                    <button class="cantidad-btn" id="incrementar">+</button>
+                </div>
+            </div>
+
+            <button class="btn-agregar">Agregar al carrito</button>
+        </section>
+    </main>
+
+    <script>
+        // Funcionalidad para incrementar/decrementar cantidad
+        document.getElementById('incrementar').addEventListener('click', function() {
+            const input = document.getElementById('cantidad');
+            if (parseInt(input.value) < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        });
+
+        document.getElementById('decrementar').addEventListener('click', function() {
+            const input = document.getElementById('cantidad');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+    </script>
+</body>
+</html>

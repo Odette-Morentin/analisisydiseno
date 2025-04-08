@@ -1,0 +1,161 @@
+:root {
+    --color-azul: #1597BB;
+    --color-verde: #4CAF50;
+    --color-negro: #1A1A1A;
+    --color-blanco: #FFFFFF;
+    --color-hover: #272727;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.producto-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.producto-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.producto-imagen img {
+    width: 75%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+.producto-info {
+    flex: 1;
+    padding: 1rem;
+}
+
+.producto-info h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-negro);
+}
+
+.precio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-verde);
+    margin-bottom: 1.5rem;
+}
+
+.descripcion {
+    margin-bottom: 2rem;
+    color: var(--color-negro);
+}
+
+.tallas h3, .cantidad h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.tallas-opciones {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.talla-option input {
+    display: none;
+}
+
+.talla-option span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.talla-option input:checked + span {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    border-color: var(--color-azul);
+}
+
+.talla-option span:hover {
+    background-color: var(--color-hover);
+    color: var(--color-blanco);
+}
+
+.cantidad-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cantidad-btn {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cantidad-btn:hover {
+    background-color: var(--color-hover);
+}
+
+#cantidad {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin: 0 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-agregar {
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-agregar:hover {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+    .producto-container {
+        flex-direction: column;
+    }
+}

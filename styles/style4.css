@@ -1,0 +1,113 @@
+:root {
+    --color-azul: #1597BB;
+    --color-verde: #4CAF50;
+    --color-negro: #1A1A1A;
+    --color-blanco: #FFFFFF;
+    --color-hover: #272727;
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+body {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-family: var(--fuente-montserrat);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem;
+}
+
+.payment_contenido {
+    background-color: var(--color-azul);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+}
+
+.payment_contenido_titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+label {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;  /* Firefox */
+    -webkit-appearance: none;    /* Chrome, Safari */
+    appearance: none;         /* Estandar */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+input[type="button"] {
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    font-family: var(--fuente-montserrat);
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+input[type="button"]:hover {
+    background-color: var(--color-hover);
+}
